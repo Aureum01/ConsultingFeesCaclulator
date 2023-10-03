@@ -212,7 +212,7 @@ namespace CIS325CFC.ConsultingFeesCalculator
             try
             {
                 // Email sender and recipient setup
-                MailAddress from = new MailAddress("hackeroned3v@gmail.com", "Consulting Firm Inc");
+                MailAddress from = new MailAddress("SENDING_EMAIL", "Consulting Firm Inc");
                 MailAddress to = new MailAddress(clientEmail, clientName);
 
                 // Automatic Fix
@@ -229,7 +229,7 @@ namespace CIS325CFC.ConsultingFeesCalculator
                 {
                     EnableSsl = true,
                     UseDefaultCredentials = false,
-                    Credentials = new System.Net.NetworkCredential("hackeroned3v@gmail.com", "amhtqzzjojnakthh"),
+                    Credentials = new System.Net.NetworkCredential("GMAIL", "AAP_CODE"),
                     DeliveryMethod = SmtpDeliveryMethod.Network
                 };
 
@@ -277,7 +277,7 @@ namespace CIS325CFC.ConsultingFeesCalculator
         private void SendInvoiceEmailWithPdf(string clientName, string clientEmail, string invoiceMessage, byte[] pdfBytes, bool hasOvertime, decimal overtimeCharge, int overtimeHours)
         {
             // Set email sender information
-            string sendFromEmail = "rodney798@flagler.edu";
+            string sendFromEmail = "SET_EMAIL";
             string sendFromName = "Consulting Firm Inc";
 
             // Email subject
@@ -328,7 +328,7 @@ namespace CIS325CFC.ConsultingFeesCalculator
             };
 
             // Network Credential
-            System.Net.NetworkCredential basicauthenticationinfo = new System.Net.NetworkCredential("hackeroned3v@gmail.com", "amhtqzzjojnakthh");
+            System.Net.NetworkCredential basicauthenticationinfo = new System.Net.NetworkCredential("GMAIL_CRED", "APP_CODE");
             client.Port = int.Parse("587");
 
             // Secure SSL 
